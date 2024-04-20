@@ -12,6 +12,9 @@
 Route::get('/', 'LoginController@showLoginForm')->name('login');
 Route::post('login', 'LoginController@login')->name('proceed-login');
 
+Route::get('register', 'RegisterController@register')->name('register');
+Route::post('register', 'RegisterController@actionregister')->name('action-register');
+
 Route::middleware(['auth'])->group(function () {
 
     //dashboard

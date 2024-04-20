@@ -30,7 +30,7 @@
 
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">
-                                Login<br>
+                                Daftar Akun<br>
                                 <small class="text-muted h6">
                                     Sistem Informasi Rental Mobil
                                 </small>
@@ -38,25 +38,32 @@
 
                         </div>
 
-                        <form class="user" action="{{route('proceed-login')}}" method="POST">
+                        <form class="user" action="{{route('action-register')}}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label>Username</label>
-                                <input type="text" class="form-control" name="username" required="" autofocus="">
+                                <label>Name</label>
+                                <input type="text" class="form-control" name="name" required="" autofocus="">
                             </div>
                             <div class="form-group">
-                                    <label>Password</label>
+                                <label>Username</label>
+                                <input type="text" class="form-control" name="username" required="">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" name="email" required="">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
                                 <input type="password" class="form-control" name="password" required="">
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    Login
+                                    Daftar
                                 </button>
                             </div>
                             <div class="form-group">
-                                <a href="{{'/register'}}" class="btn btn-primary btn-block">
-                                    Register
-                                </a>
+                                <p>Sudah punya akun ?<a href="{{'/'}}"> Login</a>
+                                </p>
                             </div>
                         </form>
                     </div>
@@ -70,10 +77,10 @@
     <script src="{{asset('backend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}" type="text/javascript"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="{{asset('backend/vendor/jquery-easing/jquery.easing.min.js')}} type="text/javascript""></script>
+    <script src="{{asset('backend/vendor/jquery-easing/jquery.easing.min.js')}}" type="text/javascript"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{asset('backend/js/sb-admin-2.min.js')}} type="text/javascript""></script>
+    <script src="{{asset('backend/js/sb-admin-2.min.js')}}" type="text/javascript"></script>
 
 </body>
 
